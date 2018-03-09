@@ -60,7 +60,7 @@ function moveForward(roverMars){
   switch (roverMars.direction) {
     case "N":
       if (roverMars.y <=9 && roverMars.y > 0){                // if the rover is in the limit, can't go forward
-        if (grid[roverMars.y - 1][roverMars.x] == null){      //if there is not an obstacle or another Rover in the future position
+        if (grid[roverMars.y - 1][roverMars.x] == null){      //if there is not an obstacle, "O", or another Rover "R", in the future position
           grid[roverMars.y][roverMars.x] = null;               // free the actual position in the grid
           roverMars.y -= 1;                                     //move one step
           inLimits = true;                                      // the rover is inside the limits
@@ -148,7 +148,7 @@ function moveBackward(roverMars){
   switch (roverMars.direction) {
     case "N":
       if (roverMars.y <9 && roverMars.y >= 0){                          // if the rover is in the limit, can't go backward
-        if ( grid[roverMars.y + 1][roverMars.x] == null){               //if there is not an obstacle or another Roverin the future position
+        if ( grid[roverMars.y + 1][roverMars.x] == null){               //if there is not an obstacle, "O", or another Rover "R", in the future position
           grid[roverMars.y][roverMars.x] = null;                        // free the actual position in the grid
           roverMars.y += 1;                                              //move one step
           inLimits = true;                                               // the rover is inside the limits
