@@ -67,7 +67,11 @@ function moveForward(roverMars){
           grid[roverMars.y][roverMars.x] = "R";            // next position is going to be fill
         }
         else {
+          if (grid[roverMars.y - 1][roverMars.x]=="O"){
           console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")         // the rover can't go forward. there is an obstacle
+          }
+          else {console.log("No se puede avanzar debido a que hay otro Rover en el camino");            // the rover can't go forward. there is another rover
+          }  
         }                                                                                          
       }
       else {
@@ -85,12 +89,15 @@ function moveForward(roverMars){
 
         }
         else {
-          console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")
-        } 
-
+          if (grid[roverMars.y][roverMars.x + 1]=="O"){
+            console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")         
+            }
+            else {console.log("No se puede avanzar debido a que hay otro Rover en el camino");            
+            }  
+          }     
       }
       else {
-        console.log("Ha llegado al lñimite del terreno");
+        console.log("Ha llegado al límite del terreno");
       }
     
      break;
@@ -104,8 +111,12 @@ function moveForward(roverMars){
 
         }
         else {
-          console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")
-        } 
+          if (grid[roverMars.y + 1][roverMars.x]=="O"){
+            console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")         
+            }
+            else {console.log("No se puede avanzar debido a que hay otro Rover en el camino");            
+            }  
+          } 
 
       }
       else {
@@ -123,8 +134,12 @@ function moveForward(roverMars){
 
         }
         else {
-          console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")
-        }
+          if (grid[roverMars.y][roverMars.x - 1]=="O"){
+            console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")         
+            }
+            else {console.log("No se puede avanzar debido a que hay otro Rover en el camino");            
+            }  
+          } 
 
       }
       else {
@@ -156,8 +171,12 @@ function moveBackward(roverMars){
 
         }  
         else {
-          console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")
-        }
+          if (grid[roverMars.y + 1][roverMars.x]=="O"){
+            console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")         // the rover can't go backward. there is an obstacle
+            }
+            else {console.log("No se puede avanzar debido a que hay otro Rover en el camino");            // the rover can't go forward. there is another rover
+            }  
+          } 
                                               
 
       }
@@ -177,9 +196,12 @@ function moveBackward(roverMars){
 
         }
         else {
-          console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")
-        }
-
+          if (grid[roverMars.y][roverMars.x - 1]=="O"){
+            console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")         
+            }
+            else {console.log("No se puede avanzar debido a que hay otro Rover en el camino");            
+            }  
+          } 
       }
       else {
         console.log("Ha llegado al limite del terreno");
@@ -196,9 +218,12 @@ function moveBackward(roverMars){
 
         }
         else {
-          console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")
-        }
-
+          if (grid[roverMars.y - 1][roverMars.x]=="O"){
+            console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")         
+            }
+            else {console.log("No se puede avanzar debido a que hay otro Rover en el camino");            
+            }  
+          } 
       }
       else {
         console.log("Ha llegado al limite del terreno");
@@ -216,8 +241,12 @@ function moveBackward(roverMars){
 
         }
         else {
-          console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")
-        }
+         if (grid[roverMars.y][roverMars.x + 1]=="O"){
+          console.log("No se puede avanzar debido a un obstáculo en el camino donde se dirige")         
+          }
+          else {console.log("No se puede avanzar debido a que hay otro Rover en el camino");            
+          }  
+        } 
       }
       else {
         console.log("Ha llegado al limite del terreno");
