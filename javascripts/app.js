@@ -250,11 +250,8 @@ function moveBackward(roverMars){
       }
       else {
         console.log("Ha llegado al limite del terreno");
-      }
-    
-   
-      break;  
- 
+      }   
+      break;   
  }
   console.log("Posición actual:", [roverMars.x, roverMars.y]);                          // actual position is printed in an array 
   if (inLimits) {roverMars.travelLog.push([roverMars.x, roverMars.y])}                  // if there has been a movement, the position (inside an array) is saved in the travelLog array
@@ -289,18 +286,33 @@ function inputCommands (input, roverMars) {
 
       case "r":
         turnRight(roverMars);
-        break;
-
-    
+        break;    
       }
+  }
+}
   
 
+
+function gridRover(numberOfObstacles){                  //
+ 
+    for (var i = 1; i <= numberOfObstacles; i++){
+      var row = getRandomNum();
+      var column = getRandomNum();
+      grid[row][column] = "O";
+    }
+  console.log(grid);  
   }
 
 
 
 
+
+
+function getRandomNum(){
+  return Math.floor(Math.random() * 10);
 }
+
+
 
 var rover = {
 
@@ -309,6 +321,9 @@ var rover = {
   y: 0,
   travelLog: []
 }
+
+
+
 var rover2 = {
 
   direction: "N",
@@ -318,15 +333,17 @@ var rover2 = {
 }
 
 
-var grid = [
-  [null, null, null, null, "O", null, null, "O", null, null],
-  [null, "O", null, "O", null, null, "O", null, "O", null ],
-  ["O", null, null, null, null,"O", null, null, null, null ],
-  [null, "O", null, null, null, null, "O", null, null, null],
-  [null, null, null, null, "O", null, null, null, null, "O"],
-  [null, null, null, "O", null, null, null, "O", null, null],
-  [null, "O", null, "O", null, null, "O", null, "O", null ],
-  ["O", null, null, null, null,"O", null, null, null, null ],
-  [null, "O", null, null, null, null, "O", null, null, null],
-  [null, null, null, null, "O", null, null, null, null, "O"],
-];
+
+
+ var grid = [
+  [null, null, null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null, null, null],
+]; 
