@@ -293,7 +293,7 @@ function inputCommands (input, roverMars) {
   
 
 
-function gridRover(numberOfObstacles){                  //
+function gridRover(numberOfObstacles,grid){                  //
  
     for (var i = 1; i <= numberOfObstacles; i++){
       var row = getRandomNum();
@@ -332,18 +332,17 @@ var rover2 = {
   travelLog: []
 }
 
+var grid = new Array(10);
+for (var i = 0; i < 10; i++) {
+  grid[i] = new Array(10);
+  for (var j = 0; j <10; j++) {
+    grid[i][j] = null;
+  }
+}
 
 
 
- var grid = [
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null, null],
-]; 
+
+
+
+ 
