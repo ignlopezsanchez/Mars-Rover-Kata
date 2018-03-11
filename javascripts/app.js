@@ -331,12 +331,12 @@ var rover2 = {
   y: 0,
   travelLog: []
 }
+var grid = [];
 
-var grid = new Array(10);
-for (var i = 0; i < 10; i++) {
-  grid[i] = new Array(10);
-  for (var j = 0; j <10; j++) {
-    grid[i][j] = null;
+for(var i=0 ; i<10; i++){
+  grid[i] = [];
+  for(var j=0; j<10; j++){
+    grid[i][j]= null;
   }
 }
 
